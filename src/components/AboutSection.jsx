@@ -1,19 +1,4 @@
 import { Code } from "lucide-react";
-
-// ✅ Reusable Card
-// const Card = ({ title, description }) => (
-//   <div className="p-6 gradient-border card-hover">
-//     <div className="flex items-start gap-4">
-//       <div className="p-3 rounded-full bg-primary/10">
-//         <Code className="text-primary" />
-//       </div>
-//       <div>
-//         <h3 className="text-lg font-semibold">{title}</h3>
-//         <p className="text-sm text-muted-foreground">{description}</p>
-//       </div>
-//     </div>
-//   </div>
-// );
 const Card = ({ title, description, delayClass }) => (
   <div
     className={`p-6 gradient-border card-hover rounded-2xl bg-card shadow-lg opacity-0 ${delayClass} transform`}
@@ -31,23 +16,6 @@ const Card = ({ title, description, delayClass }) => (
 );
 
 
-// ✅ Grid of cards
-// const CardGrid = () => (
-//   <div className="grid gap-6 grid-cols-0">
-//     <Card
-//       title="Frontend Development"
-//       description="Building responsive and interactive user interfaces."
-//     />
-//     <Card
-//       title="Backend Development"
-//       description="Designing scalable and secure server-side applications."
-//     />
-//     <Card
-//       title="UI/UX Design"
-//       description="Creating visually appealing and user-friendly designs."
-//     />
-//   </div>
-// );
 const CardGrid = () => (
   <div className="grid justify-end grid-cols-1 gap-4">
     <Card
@@ -114,13 +82,29 @@ export const AboutSection = () => {
       building something on my own, I always strive to bring fresh 
       ideas, attention to detail, and a problem-solving mindset.
     </p>
+    <div className="flex flex-col sm:flex-row gap-7 pt-4 justify-center animate-fade-in-delay-5">
+      <a href="#contact" className="cosmic-button">
+        {" "}
+        Get In Touch 
+      </a>
+
+      <a href="/" target="_blank" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300
+      animate-fade-in-delay-5">
+        {" "}
+        Download CV 
+      </a>
+
+
+    </div>
   </div>
+  
+
 
   {/* Right: Card Grid */}
   <div className="md:col-span-6">
     <CardGrid />
-  </div>
-</div>
+          </div>
+        </div>
       </div>
     </section>
   );
